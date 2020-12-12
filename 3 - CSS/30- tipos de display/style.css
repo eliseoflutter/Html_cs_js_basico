@@ -1,0 +1,97 @@
+/* Display block, inline e inline block  */
+
+.dis-block {
+    display: block;
+}
+
+.padre {
+    border: 1px solid red
+}
+
+.padre .d-inline {
+    display: inline;
+    width: 100px;
+    background: green;
+    margin: .3em;
+}
+
+.d-inline-block {
+    display: inline-block;
+    width: 100px;
+    background: green;
+    margin: .3em;
+}
+
+
+/* Display flex */
+
+.contenedor-flex {
+    margin-top: 10px;
+    display: flex;
+    height: 300px;
+    flex-direction: row;
+    border: 1px solid red;
+    align-items: flex-start;
+}
+
+.contenedor-flex div {
+    border: 1px solid green;
+    flex: 1;
+}
+
+.contenedor-flex div:first-of-type {
+    order: 4;
+}
+
+
+/* Display grid */
+
+.d-grid {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 100px;
+    grid-gap: 10px;
+}
+
+.d-grid div {
+    border: 1px solid green
+}
+
+.d-grid div:first-of-type {
+    grid-column: 1/3;
+    grid-row: 2;
+}
+
+
+/* Layout base */
+
+.page {
+    margin-top: 25px;
+    display: grid;
+    width: 100%;
+    height: 100vh;
+    grid-template-columns: 160px 1fr;
+    grid-template-rows: 50px 1fr 30px;
+    grid-template-areas: "head head" "nav main" "nav footer";
+}
+
+.page header {
+    grid-area: head;
+    background-color: yellow;
+}
+
+.page nav {
+    grid-area: nav;
+    background-color: orange;
+}
+
+.page main {
+    grid-area: main;
+    background-color: red;
+}
+
+.page footer {
+    grid-area: footer;
+    background-color: green;
+}

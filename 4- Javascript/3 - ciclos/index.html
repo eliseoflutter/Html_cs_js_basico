@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ciclos</title>
+</head>
+
+<body>
+
+    <script>
+        const arreglo1 = ["Luis", "Diana", "Martha", "Pedro"];
+        const arreglo2 = [10, 50, 20, 30.5, 48];
+        const arreglo3 = [{
+            nombre: "Luis",
+            edad: 24
+        }, {
+            nombre: "Diana",
+            edad: 25
+        }, {
+            nombre: "Pedro",
+            edad: 53
+        }, ]
+
+        console.log(arreglo1.length);
+
+        for (let index = 0; index < arreglo1.length; index++) {
+            console.log(arreglo1[index])
+        }
+
+
+        // arreglo 2
+        let i = 0;
+        let total = 0;
+        while (i < arreglo2.length) {
+            total = total + arreglo2[i]
+            i++;
+        }
+
+        console.log(total);
+
+        //arreglo 3
+        for (let index = 0; index < arreglo3.length; index++) {
+            console.log(`Hola, mi nombre es ${arreglo3[index].nombre} y mi edad es ${ arreglo3[index].edad }`)
+        }
+    </script>
+</body>
+
+</html>

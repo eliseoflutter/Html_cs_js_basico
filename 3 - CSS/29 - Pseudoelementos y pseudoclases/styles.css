@@ -1,0 +1,133 @@
+body {
+    padding: 4em;
+}
+
+
+/*1 - Pseudo elementos */
+
+
+/* after y before */
+
+.cuadrado {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+}
+
+.cuadrado::before,
+.cuadrado::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    background: blue;
+    top: -25px;
+    border-radius: 50%;
+}
+
+.cuadrado::before {
+    left: -25px;
+}
+
+.cuadrado::after {
+    right: -25px;
+}
+
+
+/* first letter */
+
+.first-letter::first-letter {
+    color: red;
+    font-family: sans-serif;
+    font-size: 25px;
+}
+
+
+/* first-line */
+
+.first-line::first-line {
+    background: yellow;
+    font-family: sans-serif;
+}
+
+
+/* selection */
+
+.selection::selection {
+    background: red;
+    font-family: sans-serif;
+}
+
+
+/* 2 - Pseudo clases */
+
+
+/* hover */
+
+.enlace {
+    padding: .4em 1em;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    border-radius: 25px;
+}
+
+.enlace:hover {
+    color: #fff;
+    background-color: #000;
+}
+
+
+/* active */
+
+.enlace:active {
+    background-color: red;
+}
+
+
+/* focus */
+
+input {
+    outline: none;
+    border: 1px solid #ccc;
+}
+
+input:focus {
+    border: 1px solid rgb(21, 30, 112);
+}
+
+
+/* disabled */
+
+input:disabled {
+    background-color: #ccc;
+}
+
+
+/* first child */
+
+.padre p:first-child {
+    color: red;
+}
+
+
+/* nth child */
+
+.padre p:nth-child(2n+1) {
+    color: blue;
+}
+
+
+/* last child */
+
+.padre p:last-child {
+    color: red;
+}
+
+
+/* first of type */
+
+.padre p:first-of-type {
+    background-color: yellow;
+}

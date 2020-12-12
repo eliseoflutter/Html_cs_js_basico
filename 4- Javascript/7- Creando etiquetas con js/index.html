@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creando etiquetas</title>
+</head>
+
+<style>
+    #app {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .cuadrado {
+        width: 100px;
+        height: 100px;
+        background: #af0000;
+        margin: 1em;
+    }
+</style>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        const div = document.getElementById("app");
+
+        function agregaEtiqueta() {
+            const el = document.createElement("DIV");
+            el.classList.add("cuadrado");
+            el.setAttribute("name", "cuadrado");
+            div.appendChild(el);
+        }
+
+        for (let i = 0; i < 10; i++) {
+            agregaEtiqueta();
+        }
+    </script>
+</body>
+
+</html>

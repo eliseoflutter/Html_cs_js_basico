@@ -1,0 +1,16 @@
+h1 {
+    color: red;
+    text-shadow: -3px 5px 10px black;
+}
+
+.caja {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    box-shadow: 5px 5px 5px 1px #000;
+    transition: transform ease-in-out 1s;
+}
+
+.caja:hover {
+    transform: translateY(30px);
+}

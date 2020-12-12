@@ -1,0 +1,17 @@
+body {
+    background: #000;
+}
+
+.rectangulo {
+    width: 45em;
+    height: 15em;
+    border: 3px solid #af0000;
+    background: rgb(12, 13, 53);
+}
+
+
+/* px em rem */
+
+p {
+    font-size: 2em;
+}

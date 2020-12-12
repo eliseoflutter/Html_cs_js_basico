@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event</title>
+</head>
+
+<style>
+    body {
+        height: 200vh;
+    }
+    
+    .cuadrado {
+        width: 100px;
+        height: 100px;
+        background: #af0000;
+        transition: all ease-in-out .25s;
+    }
+    
+    .cuadrado-verde {
+        background: green;
+    }
+    
+    .rectangulo {
+        width: 200px;
+    }
+    
+    .escala-2 {
+        height: 200px;
+    }
+</style>
+
+<body>
+
+    <div>
+        <input id="nombres" type="text" placeholder="Nombres">
+    </div>
+    <div>
+        <select id="paises">
+            <option value="" selected disabled>-Elige uno</option>
+            <option value="P">Perú</option>
+            <option value="B">Brasil</option>
+            <option value="A">Argentina</option>
+        </select>
+    </div>
+
+    <div class="cuadrado"></div>
+
+
+    <script>
+        // Load
+        window.onload = (ev) => {
+            console.log("La pagina cargo correctamente!");
+        }
+
+        // BeforeUnload
+        window.onbeforeunload = () => {
+            return confirm("Deseas abandonar la página?")
+        }
+
+        // Scroll
+        window.onscroll = (ev) => {
+            const scroll = document.body.scrollTop || document.documentElement.scrollTop;
+            console.log(scroll);
+        }
+
+        // Keyup
+        const input = document.getElementById("nombres");
+        input.addEventListener("keyup", (ev) => {
+            console.log(ev.target.value);
+        })
+
+        // Change
+        const select = document.getElementById("paises");
+        select.addEventListener("change", (ev) => {
+            console.log(ev.target.value);
+        })
+
+        // Mouse enter
+        const cuadrado = document.querySelector(".cuadrado");
+        cuadrado.addEventListener("mouseenter", () => {
+            cuadrado.classList.add("cuadrado-verde");
+        })
+
+        // Mouse move
+        cuadrado.addEventListener("mousemove", () => {
+            cuadrado.classList.add("rectangulo");
+        })
+
+        // Mouse leave
+        cuadrado.addEventListener("mouseleave", () => {
+            cuadrado.classList.remove("cuadrado-verde");
+            cuadrado.classList.remove("rectangulo");
+            cuadrado.classList.remove("escala-2");
+        })
+
+        // Click
+        cuadrado.addEventListener("click", () => {
+            cuadrado.classList.add("escala-2");
+        })
+    </script>
+</body>
+
+</html>

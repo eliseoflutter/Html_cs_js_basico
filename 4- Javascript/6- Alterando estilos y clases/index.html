@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterando estilos con JS</title>
+</head>
+<style>
+    .cuadrado {
+        height: 100px;
+        width: 100px;
+        background: #af0000;
+        transition: ease-in-out .3s;
+    }
+    
+    .cuadrado-negro {
+        background: #000;
+    }
+    
+    .rectangulo {
+        width: 200px;
+    }
+</style>
+
+<body>
+    <div class="cuadrado"></div>
+
+    <script>
+        const div = document.querySelector(".cuadrado");
+        console.log(div.classList);
+
+        setTimeout(() => {
+            div.classList.add("cuadrado-negro")
+        }, 4000);
+
+        setTimeout(() => {
+            div.classList.remove("cuadrado-negro")
+            div.classList.add("rectangulo")
+        }, 6000);
+    </script>
+</body>
+
+</html>

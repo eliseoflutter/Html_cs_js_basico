@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores JS</title>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi accusantium eos nam magni consectetur, dolor consequatur facilis quod enim rem nesciunt perspiciatis libero minus fuga eum dolorem cumque quas cupiditate in explicabo exercitationem sint.
+        Alias temporibus dicta omnis, id exercitationem illo recusandae odit sequi quo facilis esse nostrum a blanditiis!</p>
+    <a href="#">Enlace</a>
+    <div class="enlaces">
+        <a href="#">item</a>
+        <a href="#">item</a>
+        <a href="#">item</a>
+        <a href="#">item</a>
+        <a href="#">item</a>
+    </div>
+    <div class="padre">
+        <div class="hijo">
+
+        </div>
+    </div>
+
+    <div class="padre"></div>
+
+    <button type="button" id="btn-enviar">Enviar</button>
+
+    <input type="text" name="nombres" placeholder="Escribe tu nombre">
+
+    <script>
+        //selectores
+
+        //querySelectorAll
+        const elementos = document.querySelectorAll(".enlaces a");
+        console.log(elementos);
+
+        // querySelector
+        const el = document.querySelector("#btn-enviar")
+        console.log(el);
+
+
+        // getElementByClassName
+        console.log(document.getElementsByClassName("padre"));
+
+        // getElementById
+        console.log(document.getElementById("btn-enviar"));
+
+        // getElementsByName
+        console.log(document.getElementsByName("nombres")[0]);
+
+        //getElementsByTagName
+        console.log(document.getElementsByTagName("p"));
+        console.log(document.getElementsByTagName("a"));
+    </script>
+</body>
+
+</html>

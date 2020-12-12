@@ -1,0 +1,44 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.padre {
+    height: 200vh;
+    background-color: #000;
+}
+
+.padre .fijo-arriba {
+    width: 100%;
+    height: 60px;
+    background-color: rgb(170, 14, 14);
+    position: fixed;
+    left: 50px;
+    top: 50px;
+}
+
+.padre-2 {
+    height: 500px;
+    background-color: rgb(9, 4, 36);
+    position: relative;
+}
+
+.padre-2 .hijo {
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: 15;
+}
+
+.padre-2 .hijo-2 {
+    width: 150px;
+    height: 100px;
+    background-color: rgb(145, 24, 24);
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    z-index: 16;
+}

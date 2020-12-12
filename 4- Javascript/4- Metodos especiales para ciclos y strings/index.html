@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metodos especiales para ciclos y strings</title>
+</head>
+
+<body>
+
+    <script>
+        //Forma de declarar funcion
+        function suma(a, b) {
+            //asdasdasd
+            console.log(a + b);
+        }
+
+        suma(4, 5);
+        // datos
+        const cadena = "Hola mundo desde javascript";
+        const cadena2 = "2020-11-15T08:30.45Z"
+        const arregloNombres = ["Luis", "Diana", "Martha", "Pedro"];
+        const arregloUsuarios = [{
+            nombre: "Luis",
+            edad: 24,
+            activo: true
+        }, {
+            nombre: "Diana",
+            edad: 25,
+            activo: false
+        }, {
+            nombre: "Pedro",
+            edad: 53,
+            activo: false
+        }, ];
+
+        //Cadenas
+        const arr = cadena.split("a"); //
+        console.log(arr);
+        console.log(cadena2.substring(0, 10));
+        console.log(cadena.indexOf("sdasdasdasd"))
+
+        if (cadena.indexOf("Hola") > -1) {
+            console.log('Se encontró');
+        }
+        //Arreglos
+        console.log(arregloNombres.indexOf("Pedro"));
+
+
+        arregloNombres.forEach(function(element, index) {
+            console.log(element, index);
+        })
+
+        const arr2 = arregloUsuarios.filter((element, index) => element.activo)
+        const arr3 = arregloUsuarios.map((element, index) => {
+            return {
+                nombre: element.nombre,
+            }
+        })
+
+        const user = arregloUsuarios.find((element, index) => element.nombre === "Luis")
+        console.log(user);
+
+        const indice = arregloUsuarios.findIndex((element, index) => element.nombre === "Pedro");
+
+        console.log(indice);
+
+
+        //Agregar items
+        arregloUsuarios.push({
+            nombre: "Juan",
+            edad: 22,
+            activo: true
+        })
+        console.log(arregloUsuarios);
+
+        //Eliminar item
+        /* arregloUsuarios.splice(indice, 1);
+        console.log(arregloUsuarios);
+ */
+        //Actualizar
+        arregloUsuarios.splice(indice, 1, {
+            nombre: "Pedro",
+            edad: 54,
+            activo: true
+        });
+        console.log(arregloUsuarios);
+    </script>
+</body>
+
+</html>
